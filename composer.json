@@ -1,12 +1,6 @@
 {
     "name": "nailsapp/module-curl",
-    "keywords":
-    [
-        "Nails",
-        "Shed Collective",
-        "CodeIgniter",
-        "Curl Module"
-    ],
+    "keywords": ["Nails", "Shed Collective", "CodeIgniter", "Curl Module"],
     "homepage": "http://nailsapp.co.uk/modules/curl",
     "description": "This is the \"Curl\" module for Nails.",
     "license": "MIT",
