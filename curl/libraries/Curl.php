@@ -255,7 +255,7 @@ class Curl {
 		// If no a protocol in URL, assume its a CI link
 		if ( ! preg_match('!^\w+://! i', $url))
 		{
-			$this->_ci->load->helper('url');
+			\Nails\Factory::helper('url');
 			$url = site_url($url);
 		}
 
@@ -302,19 +302,19 @@ class Curl {
 		// Execute the request & and hide all output
 		$this->response = curl_exec($this->session);
 		$this->info = curl_getinfo($this->session);
-		
+
 		// Request failed
 		if ($this->response === FALSE)
 		{
 			$errno = curl_errno($this->session);
 			$error = curl_error($this->session);
-			
+
 			curl_close($this->session);
 			$this->set_defaults();
-			
+
 			$this->error_code = $errno;
 			$this->error_string = $error;
-			
+
 			return FALSE;
 		}
 
